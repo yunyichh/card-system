@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>管理后台</title>
+</head>
+<body>
+<noscript>
+  <strong>We're sorry but this page doesn't work properly without JavaScript enabled.
+    Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<script type="text/javascript">
+  var config = {
+    url: 'http://127.0.0.4',
+    functions: ['product_manual'], // 实验性功能, 手动发货
+    captcha: {
+      // 验证码驱动
+      driver: 'geetest',
+      // 验证码配置
+      config: {
+        success: 1,
+        gt: false,
+        challenge: 'f49f60a11a4aa1f46274808a81ecba9d'
+      },
+      scene: {
+        auth: {
+          // 开启登录验证码
+          login: 0,
+        },
+      }
+    },
+  };
+</script>
+<!-- built files will be auto injected -->
+</body>
+</html>
